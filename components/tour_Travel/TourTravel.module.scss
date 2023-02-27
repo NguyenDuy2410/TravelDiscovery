@@ -1,0 +1,16 @@
+.TourTravel {
+    max-width: 88%;
+    margin-left: 9%;
+    .Tour {
+        h1 {
+            text-align: center;
+            margin: 1em 0 1em 0;
+        }
+        .slick-slide {
+            width: 100%;
+        }
+        .slick-arrow slick-next .slick-arrow slick-prev {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.TourItem {
+    height: 15em;
+    width: 15em;
+    img {
+        height: 70%;
+        width: 100%;
+        border-radius: 15%;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.5);
+            margin: 0 0.1em 0 0.1em;
+        }
+    }
+    .item_title {
+        text-align: center;
+        p {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+    }
+}

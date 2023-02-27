@@ -1,0 +1,49 @@
+.Background_Content {
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    img {
+        height: 100%;
+        position: relative;
+        width: 80%;
+    }
+    .discount_Tickets {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25em;
+        height: 25em;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        right: 12%;
+        bottom: 8%;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        p {
+            display: block;
+            font-size: 2em;
+            text-align: center;
+            padding-bottom: 0.2em;
+            color: #fff;
+        }
+        .button_buy {
+            border-radius: 0.5em;
+            border: 2px solid #fff;
+            height: 2em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            font-size: 1.2em;
+            align-items: center;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.5);
+                color: rgba(204, 204, 204, 0.5);
+            }
+        }
+    }
+}

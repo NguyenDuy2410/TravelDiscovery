@@ -1,0 +1,130 @@
+.Header {
+    display: inline-block;
+    justify-content: space-evenly;
+    top: 0;
+    width: 100%;
+    background: hsla(0, 0%, 100%, 0.8);
+    position: fixed;
+    z-index: 9999;
+    .active {
+        border-bottom: 2px solid #104e8b;
+        color: #104e8b !important;
+    }
+    .Search {
+        left: 0;
+        right: 0;
+        height: 2em;
+        display: flex;
+        justify-content: space-between;
+        // position: relative;
+        background-color: #104e8b;
+        svg {
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                color: #ccc;
+            }
+        }
+        .language {
+            cursor: pointer;
+            color: #fff;
+            &:hover {
+                color: #ccc;
+            }
+        }
+
+        .search_Left {
+            width: 30%;
+
+            .social {
+                height: 2em;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                list-style: none;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                li {
+                    svg {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+        .search_right {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            margin-right: 1em;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.4);
+            input {
+                border: none;
+                width: 90%;
+                background-color: rgba(0, 0, 0, 0);
+                &:focus {
+                    outline: none;
+                }
+            }
+            svg {
+                padding-right: 0.1em;
+                color: #fff;
+                width: 10%;
+            }
+        }
+        .information {
+            width: 15%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            p {
+                color: #fff;
+            }
+        }
+    }
+    .header_bottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header_Left {
+        height: 4em;
+        display: flex;
+        align-self: center;
+
+        .title_Logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            span {
+                font-family: "Brush Script MT", "Lucida Handwriting", serif;
+                font-size: 2em;
+                color: #6c6c6c;
+            }
+        }
+    }
+    .header_menu {
+        display: flex;
+        justify-content: space-between;
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                color: #6c6c6c;
+                list-style: none;
+                margin-right: 5em;
+                cursor: pointer;
+                padding: 0.5em;
+                &:hover {
+                    color: #000;
+                    border-radius: 0.2em;
+                    border-bottom: 2px solid #104e8b;
+                }
+            }
+        }
+    }
+}
