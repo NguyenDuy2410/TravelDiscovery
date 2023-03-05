@@ -9,6 +9,7 @@
     .active {
         border-bottom: 2px solid #104e8b;
         color: #104e8b !important;
+        font-size: 1.3em !important;
     }
     .Search {
         left: 0;
@@ -114,10 +115,11 @@
             align-items: center;
 
             li {
-                color: #6c6c6c;
+                font-size: 1em;
                 list-style: none;
                 margin-right: 5em;
                 cursor: pointer;
+                font-weight: bold;
                 padding: 0.5em;
                 &:hover {
                     color: #000;

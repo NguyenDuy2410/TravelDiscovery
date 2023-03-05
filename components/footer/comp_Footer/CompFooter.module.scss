@@ -1,0 +1,62 @@
+.CompFooter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    h2 {
+        text-align: center;
+        line-height: 3em;
+    }
+    .footer_Top {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .tourSouthern {
+            width: 40%;
+            .location {
+                display: flex;
+                justify-content: center;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 11em;
+                width: 65%;
+                flex-wrap: wrap;
+                gap: 1.5em;
+                list-style-type: none;
+                li {
+                    cursor: pointer;
+                    &:hover {
+                        border-bottom: 1px solid black;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .tourNorth {
+            width: 40%;
+            .location {
+                display: flex;
+                justify-content: center;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: 11em;
+                width: 65%;
+                flex-wrap: wrap;
+                gap: 1.5em;
+                list-style-type: none;
+                li {
+                    cursor: pointer;
+                    &:hover {
+                        border-bottom: 1px solid black;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}

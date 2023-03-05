@@ -19,6 +19,7 @@ const HeaderData = JsonData.find((i) => i.header_id === "Header_id");
 
 function Header() {
     const [active, setActive] = React.useState("trangChu");
+
     return (
         <div className={cls("Header")}>
             <div className={cls("Search")}>
@@ -79,24 +80,35 @@ function Header() {
                         >
                             Trang chủ
                         </li>
-                        {/* 
-                        <li>Địa danh</li>
-                        <li>Giới thiệu</li>
-                        <li>Tin tức</li>
-                        <li>Liên hệ</li> */}
-                        {HeaderData.header_menu.map((value, index) => {
-                            return (
-                                <li
-                                    className={cls(
-                                        active === { value } ? "active" : ""
-                                    )}
-                                    onClick={() => setActive({ value })}
-                                    key={index}
-                                >
-                                    {value}
-                                </li>
-                            );
-                        })}
+
+                        <li
+                            className={cls(
+                                active === "diaDanh" ? "active" : ""
+                            )}
+                            onClick={() => setActive("diaDanh")}
+                        >
+                            Địa danh
+                        </li>
+                        <li
+                            className={cls(
+                                active === "gioiThieu" ? "active" : ""
+                            )}
+                            onClick={() => setActive("gioiThieu")}
+                        >
+                            Giới thiệu
+                        </li>
+                        <li
+                            className={cls(active === "tinTuc" ? "active" : "")}
+                            onClick={() => setActive("tinTuc")}
+                        >
+                            Tin tức
+                        </li>
+                        <li
+                            className={cls(active === "lienHe" ? "active" : "")}
+                            onClick={() => setActive("lienHe")}
+                        >
+                            Liên hệ
+                        </li>
                     </ul>
                 </div>
             </div>

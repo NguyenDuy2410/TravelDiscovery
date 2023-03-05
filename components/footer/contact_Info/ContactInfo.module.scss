@@ -1,0 +1,35 @@
+.ContactInfo {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    justify-content: center;
+    margin: 2em;
+    .title_Contact {
+        width: 20%;
+    }
+    .title_Info {
+        width: 20%;
+    }
+    ul {
+        li {
+            line-height: 1.7em;
+            list-style-type: none;
+            cursor: pointer;
+        }
+    }
+    .social_Network {
+        width: 20%;
+        .icon {
+            height: 50%;
+            width: 100%;
+        }
+        svg {
+            font-size: 1.5em;
+            margin: 0.5em;
+            cursor: pointer;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}

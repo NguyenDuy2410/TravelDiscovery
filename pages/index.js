@@ -2,8 +2,9 @@ import { Background_Content } from "../components";
 import { Header } from "../components";
 import { TourTravel } from "../components";
 import { TravelPackage } from "../components";
-import { SectionContainer } from "../components";
-
+import { NewTravel } from "../components";
+import { TouristAttraction } from "../components";
+import { Footer } from "../components";
 export default function Home() {
     return (
         <div>
@@ -11,7 +12,10 @@ export default function Home() {
             <Background_Content />
             <TourTravel />
             <TravelPackage />
-            <div style={{ height: "1000px" }}></div>
+            <NewTravel />
+            <TouristAttraction />
+            <Footer />
+            {/* <div style={{ height: "1000px" }}></div> */}
         </div>
     );
 }
