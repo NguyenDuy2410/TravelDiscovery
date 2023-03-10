@@ -1,0 +1,32 @@
+.InfoForecast {
+    background-color: rgba(255, 255, 255, 0.839);
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    border-radius: 1em;
+    width: 18%;
+
+    &:hover {
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.4);
+    }
+
+    img {
+        height: 6em;
+        width: 6em;
+    }
+
+    h2,
+    h3 {
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 739px) {
+    .InfoForecast {
+        margin-top: 3em;
+        height: 70%;
+        img {
+            height: 4em;
+            width: 4em;
+        }
+    }
+}

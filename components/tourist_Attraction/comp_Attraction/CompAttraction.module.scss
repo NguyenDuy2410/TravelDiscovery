@@ -21,6 +21,17 @@
             }
         }
         .infor_Location_Right {
+            word-break: break-word;
+            line-height: 1.2em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -ms-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-line-clamp: 5;
+            -moz-line-clamp: 5;
+            -ms-line-clamp: 5;
+            line-clamp: 5;
+            overflow: hidden;
             width: 45%;
             background-image: linear-gradient(
                     to bottom,
@@ -32,6 +43,18 @@
             line-height: 2em;
         }
         .infor_Location_Left {
+            word-break: break-word;
+            line-height: 1.2em;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -ms-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-line-clamp: 5;
+            -moz-line-clamp: 5;
+            -ms-line-clamp: 5;
+            line-clamp: 5;
+            overflow: hidden;
+
             width: 45%;
             background-image: linear-gradient(
                     to bottom,

@@ -1,10 +1,11 @@
 .PakageItem {
+    display: block;
     height: 30em;
     width: 65%;
     background-color: white;
     border-radius: 0.5em;
     margin-left: 20%;
-    margin-top: 38%;
+    margin-top: 35%;
     position: relative;
     z-index: 2;
     cursor: pointer;
@@ -45,6 +46,28 @@
         overflow: hidden;
         &:hover {
             overflow: visible;
+        }
+    }
+}
+@media only screen and (max-width: 739px) {
+    .PakageItem {
+        margin-left: -100%;
+        width: 80%;
+        margin-top: 10em;
+        height: 60%;
+        img {
+            object-fit: fill;
+            height: 10em;
+        }
+    }
+}
+// Tablet: width < 740px and width < 1024px
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+    .PakageItem {
+        margin-top: 10em;
+
+        img {
+            object-fit: fill;
         }
     }
 }

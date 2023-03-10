@@ -1,0 +1,39 @@
+{
+    
+    "HEADER": {
+        "LANGUAGE": "Language",
+        "VIETNAMES": "Viet Nam",
+        "ENGLISH": "English",
+        "LOGIN": "Login",
+        "SIGN_UP": "Sign Up",
+        "HOME_PAGE": "Home Page",
+        "SITES": "Aites",
+        "NEWS": "News",
+        "INTRODUCE": "Introduce",
+        "CONTACT": "Contact"
+    },
+    "ROLL_MORE":"Roll more",
+    "TOP_PLACE": "Top Place",
+    "TRAVEL_PACKAGE": {
+        "SIGHTSEEING_TOUR_PACKAGE": "Sightseeing Tour Package",
+        "SIMPLIFY_TRAVEL_SCHEDULE": "Simplify Travel Schedule"
+    },
+    "NEWS_TRAVEL": {
+        "NEWS_TRAVEL_EXPERIENCES": "News Travel Experiences",
+        "GO_EXPERIENCES_EVERYTHING_YOU_LIKE":
+            "Go & Experiences Everything You Like"
+
+    },
+    "TOURISTATTRACTION": {
+        "TOURIST_CITY_ONLY": "Tourist City Only",
+        "EXPLORE_ALL_CITIES_IN_VIETNAM": "Explore All Cities In VietNam",
+        "CITIES": "Cities",
+        "READ_MORE":"Read more"
+    },
+    "FOOTER":{
+        "SOCIAL_NETWORK":"Social Network",
+        "EXPLORE_SOUTH_SOUTH":"Explore The South",
+        "EXPLORE_THE_NORTH":"Explore The North"
+    }
+}
+

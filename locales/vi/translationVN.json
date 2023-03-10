@@ -1,0 +1,39 @@
+{
+    
+    "HEADER": {
+        "LANGUAGE": "Ngôn Ngữ",
+        "VIETNAMES": "Tiếng Việt",
+        "ENGLISH": "Tiếng Anh",
+        "LOGIN": "Login",
+        "SIGN_UP": "Sign Up",
+        "HOME_PAGE": "Trang Chủ",
+        "SITES": "Địa Danh",
+        "NEWS": "Tin Tức",
+        "INTRODUCE": "Giới Thiệu",
+        "CONTACT": "Liên Hệ"
+    },
+    "ROLL_MORE":"Cuộn xem thêm",
+    "TOP_PLACE": "Địa Điểm Hàng Đầu",
+    "TRAVEL_PACKAGE": {
+        "SIGHTSEEING_TOUR_PACKAGE": "Tour Tham Quan Trọn Gói",
+        "SIMPLIFY_TRAVEL_SCHEDULE": "Đơn Giản Hóa Lịch Trình Du Lịch"
+    },
+    "NEWS_TRAVEL": {
+        "NEWS_TRAVEL_EXPERIENCES": "Tin Tức & Kinh Nghiệm Du Lịch",
+        "GO_EXPERIENCES_EVERYTHING_YOU_LIKE":
+            "Đi & Trải Nghiệm Mọi Thứ Bạn Thích"
+       
+    },
+    "TOURISTATTRACTION": {
+        "TOURIST_CITY_ONLY": "Các Thành Phố Du Lịch",
+        "EXPLORE_ALL_CITIES_IN_VIETNAM": "Khám Phá Tất Cả Thành Phố",
+        "CITIES": "Các Thành Phố",
+         "READ_MORE":"Đọc thêm"
+    },
+    "FOOTER":{
+        "SOCIAL_NETWORK":"Mạng Xã Hội",
+        "EXPLORE_SOUTH_SOUTH":"Khám Phá Miền Nam",
+        "EXPLORE_THE_NORTH":"Khám Phá Miền Bắc"
+    }
+
+}

@@ -18,5 +18,45 @@
             font-size: 1.5em;
             cursor: pointer;
         }
+        button {
+            cursor: pointer;
+            color: white;
+            padding: 0.7em 1.5em;
+            background-color: rgb(242 105 67);
+            border: 0 solid rgb(242 105 67);
+            border-radius: 0.3em;
+            font-weight: bold;
+            &:hover {
+                box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.5);
+                color: #ccc;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 739px) {
+    .TourItem img {
+        height: 50%;
+        object-fit: cover;
+        width: 50%;
+    }
+    .item_title {
+        width: 50%;
+        p {
+            text-align: center;
+        }
+    }
+}
+// Tablet: width < 740px and width < 1024px
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+    .TourItem img {
+        height: 50%;
+        object-fit: cover;
+        width: 70%;
+    }
+    .item_title {
+        width: 70%;
+        p {
+            text-align: center;
+        }
     }
 }

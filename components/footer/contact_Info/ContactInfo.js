@@ -7,9 +7,12 @@ import { SiZalo } from "react-icons/si";
 import { FiYoutube } from "react-icons/fi";
 import { AiFillLinkedin } from "react-icons/ai";
 import { TfiEmail } from "react-icons/tfi";
+import { useTranslation } from "react-i18next";
 const cls = classNames.bind(style);
 
 function ContactInfo({ title_Contact, title_Info, info, contact }) {
+    const { t } = useTranslation();
+    const { i18n } = useTranslation();
     return (
         <div className={cls("ContactInfo")}>
             <div className={cls("title_Contact")}>
@@ -33,7 +36,7 @@ function ContactInfo({ title_Contact, title_Info, info, contact }) {
                 </div>
             </div>
             <div className={cls("social_Network")}>
-                <h2>Mạng xã hội</h2>
+                <h2>{t("EXPLORE_SOUTH_SOUTH")}</h2>
                 <div className={"icon"}>
                     <FaFacebookF />
                     <BsInstagram />

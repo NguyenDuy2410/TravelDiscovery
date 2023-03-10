@@ -1,4 +1,4 @@
-import { Background_Content } from "../components";
+import { Background, Background_Content } from "../components";
 import { Header } from "../components";
 import { TourTravel } from "../components";
 import { TravelPackage } from "../components";
@@ -12,6 +12,7 @@ export default function Home() {
             <Background_Content />
             <TourTravel />
             <TravelPackage />
+            <Background />
             <NewTravel />
             <TouristAttraction />
             <Footer />
