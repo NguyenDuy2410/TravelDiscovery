@@ -1,18 +1,22 @@
 import React from "react";
-import JsonData from "../../JsonData/tour_info.json";
+import { useTranslation } from "react-i18next";
+import { locales } from "i18n";
+import { dataTour } from "../../JsonData/FakeData";
+import { dataTourEN } from "../../JsonData/FakeData";
 import Slider from "react-slick";
 import classNames from "classnames/bind";
 import style from "./TourTravel.module.scss";
 import TourItem from "./tour_item/TourItem";
 import "slick-carousel/slick/slick.css";
-
 import "slick-carousel/slick/slick-theme.css";
 const cls = classNames.bind(style);
 
 function TourTravel() {
+    const { t } = useTranslation();
+    const { i18n } = useTranslation();
     const settings = {
         dots: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 3000,
         infinite: true,
         speed: 3000,
@@ -54,19 +58,23 @@ function TourTravel() {
             },
         ],
     };
+    const currentLanguage = locales[i18n.language];
+    const dataTourTravelFinal =
+        currentLanguage === "Tiếng Việt" ? dataTour : dataTourEN;
+
     return (
         <div className={cls("TourTravel")}>
             <div className={cls("Tour")}>
-                <h1>Địa điểm hàng đầu</h1>
+                <h1>{t("TOP_PLACE")}</h1>
 
                 <Slider {...settings}>
-                    {JsonData.map((v) => {
+                    {dataTourTravelFinal.map((v) => {
                         return (
                             <TourItem
                                 key={v.tourTravel_id}
-                                image={v.dataTour.image}
-                                location={v.dataTour.location}
-                                quantity={v.dataTour.quantity}
+                                image={v.tourInfo.image}
+                                location={v.tourInfo.location}
+                                quantity={v.tourInfo.quantity}
                             />
                         );
                     })}

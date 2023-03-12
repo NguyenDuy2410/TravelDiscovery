@@ -1,0 +1,29 @@
+.InfoCity {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .InfoLeft {
+        line-height: 3em;
+    }
+
+    img {
+        animation-delay: var(--animate-delay);
+        animation-iteration-count: infinite;
+        --animate-duration: 8000ms;
+        height: 10em;
+        width: 10em;
+    }
+
+    .InfoRight {
+        line-height: 3em;
+    }
+}
+@media only screen and (max-width: 739px) {
+    .InfoCity img {
+        margin-top: 3em;
+        height: 6em;
+        width: 6em;
+    }
+}

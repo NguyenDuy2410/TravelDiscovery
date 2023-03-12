@@ -7,7 +7,7 @@ function PakageItem({ image, destination, title, price, content }) {
         <div className={cls("PakageItem")}>
             <img src={image} alt="" />
             <div className={cls("itemContent")}>
-                <span>{destination}</span>
+                <h2 style={{ margin: "0.5em 0" }}>{destination}</h2>
                 <span>{title}</span>
                 <span style={{ color: "blue" }}>{price} đ</span>
                 <div className={cls("content")}>{content}</div>

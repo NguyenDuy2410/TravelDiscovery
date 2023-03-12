@@ -5,3 +5,4 @@ export { default as TravelPackage } from "./travel_Package/TravelPackage";
 export { default as NewTravel } from "./news_Travel/NewTravel";
 export { default as TouristAttraction } from "./tourist_Attraction/TouristAttraction";
 export { default as Footer } from "./footer/Footer";
+export { default as Background } from "./background/Background";

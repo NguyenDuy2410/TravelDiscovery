@@ -1,14 +1,24 @@
 import React from "react";
 import classNames from "classnames/bind";
-import { dataFooter } from "../../JsonData/dataTour";
+import { useTranslation } from "react-i18next";
+import { dataFooter } from "../../JsonData/FakeData";
+import { dataFooterEN } from "../../JsonData/FakeData";
 import style from "../footer/Footer.module.scss";
 import CompFooter from "./comp_Footer/CompFooter";
 import ContactInfo from "./contact_Info/ContactInfo";
+import { locales } from "i18n";
+
 const cls = classNames.bind(style);
+
 function Footer() {
+    const { t } = useTranslation();
+    const { i18n } = useTranslation();
+    const currentLanguage = locales[i18n.language];
+    const dataFooterFinal =
+        currentLanguage === "Tiếng Việt" ? dataFooter : dataFooterEN;
     return (
         <div className={cls("Footer")}>
-            {dataFooter.map((value, index) => {
+            {dataFooterFinal.map((value, index) => {
                 return (
                     <CompFooter
                         key={value.dataFooter_id}
@@ -17,7 +27,7 @@ function Footer() {
                     />
                 );
             })}
-            {dataFooter.map((value, index) => {
+            {dataFooterFinal.map((value, index) => {
                 return (
                     <ContactInfo
                         key={value.dataFooter_id}

@@ -27,10 +27,6 @@
                 list-style-type: none;
                 li {
                     cursor: pointer;
-                    &:hover {
-                        border-bottom: 1px solid black;
-                        color: black;
-                    }
                 }
             }
         }
@@ -51,10 +47,6 @@
                 list-style-type: none;
                 li {
                     cursor: pointer;
-                    &:hover {
-                        border-bottom: 1px solid black;
-                        color: black;
-                    }
                 }
             }
         }

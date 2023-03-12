@@ -8,7 +8,7 @@ function TourItem({ image, location, quantity }) {
             <img alt="" src={image} />
             <div className={cls("item_title")}>
                 <p>{location}</p>
-                <p>Số lượng tour: {quantity}</p>
+                <button>{quantity}</button>
             </div>
         </div>
     );

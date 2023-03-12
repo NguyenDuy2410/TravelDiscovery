@@ -1,18 +1,26 @@
 import React from "react";
-import { dataTourist } from "../../JsonData/dataTour";
+import { useTranslation } from "react-i18next";
+import { dataTourist } from "../../JsonData/FakeData";
+import { dataTouristEN } from "../../JsonData/FakeData";
 import classNames from "classnames/bind";
 import style from "./TouristAttraction.module.scss";
 import CompAttraction from "./comp_Attraction/CompAttraction";
+import { locales } from "i18n";
 const cls = classNames.bind(style);
 function TouristAttraction() {
+    const { t } = useTranslation();
+    const { i18n } = useTranslation();
+    const currentLanguage = locales[i18n.language];
+    const dataTouristFinal =
+        currentLanguage === "Tiếng Việt" ? dataTourist : dataTouristEN;
     return (
         <div className={cls("TouristAttraction")}>
             <div className={cls("h")}>
-                <h1>CÁC THÀNH PHỐ DU LỊCH</h1>
-                <h3>Khám phá tất cả các thành phố trong Việt Nam</h3>
+                <h1>{t("TOURISTATTRACTION.TOURIST_CITY_ONLY")}</h1>
+                <h3>{t("TOURISTATTRACTION.EXPLORE_ALL_CITIES_IN_VIETNAM")}</h3>
             </div>
             <div style={{ height: "80%" }}>
-                {dataTourist.map((v, i) => {
+                {dataTouristFinal.map((v, i) => {
                     return (
                         <CompAttraction
                             key={v.dataTourist_id}
