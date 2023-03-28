@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "animate.css";
 import { useTranslation } from "react-i18next";
 import { dataWeather } from "../../JsonData/FakeData";
@@ -12,12 +12,27 @@ import InfoForecast from "./info_Forecast/InfoForecast";
 const cls = classNames.bind(style);
 function Background_Content() {
     const { t } = useTranslation();
+    const [data, setData] = useState([]);
     const handleCroll = () => {
         window.scrollTo({
             top: 370,
             behavior: "smooth",
         });
     };
+
+    useEffect(() => {
+        fetch(
+            "https://api.openweathermap.org/data/2.5/forecast?lat=10.75&lon=106.6667&cnt=6&appid=12249cb52be2520de2813204ed4158d0"
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                setData(data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+    console.log(data);
     return (
         <div className={cls("Background_Content")}>
             <img src="./image/vietnamguide.png" alt="" />
@@ -37,6 +52,7 @@ function Background_Content() {
                             return (
                                 <InfoCity
                                     key={value.dataWeather_id}
+                                    data={data}
                                     city={value.dataInfoCity.city}
                                     date={value.dataInfoCity.date}
                                     windPower={value.dataInfoCity.windPower}

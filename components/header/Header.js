@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import classNames from "classnames/bind";
 import style from "./Header.module.scss";
@@ -14,6 +14,7 @@ import { TiMessages } from "react-icons/ti";
 import { AiOutlineCaretDown } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { locales } from "i18n";
+import ModalInfo from "./modalInfo/ModalInfo";
 const cls = classNames.bind(style);
 
 function Header() {
@@ -22,7 +23,7 @@ function Header() {
     const currentLanguage = locales[i18n.language];
     const router = useRouter();
     const [active, setActive] = React.useState("trangChu");
-
+    const [isLogin, setIsLogin] = useState(false);
     const handleCroll = () => {
         setActive("trangChu");
         window.scrollTo({
@@ -62,6 +63,17 @@ function Header() {
         i18n.changeLanguage(lng);
     };
 
+    const handleModelLogin = () => {
+        setIsLogin(true);
+    };
+    // const apiKey = "12249cb52be2520de2813204ed4158d0"
+    // const city ="ho chi minh"
+
+    // const response =
+    //     fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=10.75&lon=106.6667&cnt=6&appid=12249cb52be2520de2813204ed4158d0`)
+    //     .then(res=>res.json())
+    //     .then((res)=>console.log(res))
+    // console.log(response);
     return (
         <div className={cls("Header")}>
             <div className={cls("Search")}>
@@ -111,8 +123,8 @@ function Header() {
                     </div>
                 </div>
                 <div className={cls("information")}>
-                    <p>{t("HEADER.LOGIN")}</p>
-                    <p>{t("HEADER.SIGN_UP")}</p>
+                    <p onClick={handleModelLogin}>{t("HEADER.LOGIN")}</p>
+                    <p onClick={handleModelLogin}>{t("HEADER.SIGN_UP")}</p>
                     <TiMessages style={{ fontSize: " 1.5em" }} />
                     <BiUserCircle style={{ fontSize: " 1.5em" }} />
                 </div>
@@ -169,6 +181,7 @@ function Header() {
                     </ul>
                 </div>
             </div>
+            <ModalInfo isLogin={isLogin} setIsLogin={setIsLogin} />
         </div>
     );
 }

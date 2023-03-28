@@ -16,10 +16,10 @@ function TourTravel() {
     const { i18n } = useTranslation();
     const settings = {
         dots: true,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         infinite: true,
-        speed: 3000,
+        speed: 4000,
         slidesToShow: 4,
         slidesToScroll: 4,
         initialSlide: 0,

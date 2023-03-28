@@ -14,16 +14,18 @@
         align-items: center;
         justify-content: center;
         width: 90%;
-        height: 73%;
+        height: 80%;
         top: 13%;
         background-color: rgba(201, 201, 201, 0.8);
         .contInfoCity {
+            
             &:hover {
             }
         }
         .infoCity {
             height: 45%;
             width: 100%;
+            padding: 3em;
         }
         .infoForecast {
             display: flex;
