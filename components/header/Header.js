@@ -15,6 +15,7 @@ import { AiOutlineCaretDown } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { locales } from "i18n";
 import ModalInfo from "./modalInfo/ModalInfo";
+import ModalMessage from "./modalMessage/ModalMessage";
 const cls = classNames.bind(style);
 
 function Header() {
@@ -24,6 +25,7 @@ function Header() {
     const router = useRouter();
     const [active, setActive] = React.useState("trangChu");
     const [isLogin, setIsLogin] = useState(false);
+    const [isMess, setIsMess] = useState(0);
     const handleCroll = () => {
         setActive("trangChu");
         window.scrollTo({
@@ -63,6 +65,10 @@ function Header() {
         i18n.changeLanguage(lng);
     };
 
+    const handleMessage = () => {
+        setIsMess((prevState) => prevState + 1);
+    };
+
     const handleModelLogin = () => {
         setIsLogin(true);
     };
@@ -74,6 +80,7 @@ function Header() {
     //     .then(res=>res.json())
     //     .then((res)=>console.log(res))
     // console.log(response);
+
     return (
         <div className={cls("Header")}>
             <div className={cls("Search")}>
@@ -117,7 +124,7 @@ function Header() {
                     </ul>
                 </div>
                 <div className={cls("search_right")}>
-                    <div style={{ width: " 100%;" }}>
+                    <div style={{ width: " 100%" }}>
                         <input type="text" placeholder="Tìm kiếm" />
                         <BsSearch />
                     </div>
@@ -125,7 +132,10 @@ function Header() {
                 <div className={cls("information")}>
                     <p onClick={handleModelLogin}>{t("HEADER.LOGIN")}</p>
                     <p onClick={handleModelLogin}>{t("HEADER.SIGN_UP")}</p>
-                    <TiMessages style={{ fontSize: " 1.5em" }} />
+                    <TiMessages
+                        onClick={handleMessage}
+                        style={{ fontSize: " 1.5em" }}
+                    />
                     <BiUserCircle style={{ fontSize: " 1.5em" }} />
                 </div>
             </div>
@@ -182,6 +192,7 @@ function Header() {
                 </div>
             </div>
             <ModalInfo isLogin={isLogin} setIsLogin={setIsLogin} />
+            <ModalMessage isMess={isMess} setIsMess={setIsMess} />
         </div>
     );
 }

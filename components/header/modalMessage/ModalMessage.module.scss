@@ -1,0 +1,63 @@
+.ModalMessage {
+    background-color: white;
+    height: 90vh;
+    width: 25%;
+    position: absolute;
+    right: 0;
+    border-radius: 1em;
+    // z-index: 21;
+    top: 33%;
+    .title {
+        display: flex;
+        justify-content: space-around;
+        height: 6%;
+        svg {
+            font-size: 1.5em;
+            height: 100%;
+            &:hover {
+                cursor: pointer;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    .searchMessage {
+        justify-content: center;
+        height: 5%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        margin-right: 1em;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.2);
+        input {
+            border: none;
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0);
+            &:focus {
+                outline: none;
+            }
+        }
+        svg {
+            padding-right: 0.1em;
+            color: #fff;
+            width: 10%;
+        }
+    }
+    .seeMore {
+        border-top: 1px solid black;
+        height: 7%;
+        width: 100%;
+        position: absolute;
+        background: white;
+        bottom: 0;
+        border-radius: 1em 0em 1em 0em;
+        h3 {
+            display: flex;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}

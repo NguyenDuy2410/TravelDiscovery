@@ -15,7 +15,6 @@ function ModalInfo({ isLogin, setIsLogin }) {
         setIsLogin(false);
     };
 
-    console.log(count);
     const handleClick = () => {
         setCount((prevState) => prevState + 1);
     };
