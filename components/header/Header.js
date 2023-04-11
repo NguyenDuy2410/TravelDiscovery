@@ -25,7 +25,7 @@ function Header() {
     const router = useRouter();
     const [active, setActive] = React.useState("trangChu");
     const [isLogin, setIsLogin] = useState(false);
-    const [isMess, setIsMess] = useState(0);
+    const [isMess, setIsMess] = useState(1);
     const handleCroll = () => {
         setActive("trangChu");
         window.scrollTo({
